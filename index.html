@@ -1,8 +1,21 @@
 <!DOCTYPE html><html><head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <meta property='og:title' content='Kadar Emas'>
 <meta name='description' content='Berdasarkan Berat Jenis'>
 <meta property="og:image" content='https://LabPml.github.io/gold/emas.jpeg'>
+<title>Kadar Emas</title>
+    
+<!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0d47a1">
+
+  <!-- Tambahan untuk iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Kadar Emas">
+  <link rel="apple-touch-icon" href="icon-192.png">
+    
 <style>
     #spinner {
       position: fixed;
@@ -18,16 +31,48 @@
       0% { transform: translate(-50%, -50%) rotate(0deg); }
       100% { transform: translate(-50%, -50%) rotate(360deg); }
     }
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      text-align: center;
+      background-color: #d3d3d3;
+      padding: 40px;
+    }
+
+button {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #4CAF50; /* hijau */
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: background-color 0.2s, transform 0.2s;
+}
 </style>
 </head><body>
 <div id="spinner" style="display:none;"></div>
+<h3>Selamat Datang di <br>Program Kadar Emas</h3>
+<p><button onclick="go()"> Mulai </button></p>
+    
 <script>
+// Daftarkan Service Worker
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js')
+        .then(reg => console.log('SW terdaftar:', reg))
+        .catch(err => console.error('SW gagal:', err));
+    }
+
 function go() {
   document.getElementById("spinner").style.display = "block"; // Tampilkan spinner
   setTimeout(() => {
     window.location.href = "https://tjokrotourtransport.com/gold";
   }, 1000);
 }
-go();
+
 </script>
 </body></html>
