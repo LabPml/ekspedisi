@@ -7,6 +7,15 @@
 <!-- meta http-equiv="refresh" content="0; URL=https://tjokrotourtransport.com/gold/instal.html" -->
 <title>Kadar Emas</title>
 <style>
+.labelx {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 50vw;
+   height: 30vh;
+   border: none;
+   z-index: 1;
+}
 .slider {
   aspect-ratio: 4 / 7;
   position: relative;
@@ -69,20 +78,22 @@
 </style>
 </head>
 <body bgcolor="#D3D3D3" onclick="go()">
-  <center><p onclick="go()"><font face="arial" size="3px">
-  Klik di mana saja untuk mulai.
-  </font></p></center>
-  <div class="slider">
-  <div class="slide" onclick="go()">
+  <div class="labelx"><img src="label.png" width="105%"></div>
+ <p style="text-align:right; margin-right:50px;
+   font-family:arial; font-size:12px;">
+  <b>Klik di mana saja<br>untuk mulai.</b>
+  </font></p>
+  <div class="slider" onclick="go()">
+  <div class="slide">
     <img src="img1.jpg">
   </div>
-  <div class="slide" onclick="go()">
+  <div class="slide">
     <img src="img2.jpg">
   </div>
-  <div class="slide" onclick="go()">
+  <div class="slide">
     <img src="img3.jpg">
   </div>
-  <div class="slide" onclick="go()">
+  <div class="slide">
     <img src="img4.jpg">
   </div>
   </div>
